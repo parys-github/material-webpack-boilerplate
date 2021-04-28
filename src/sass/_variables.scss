@@ -1,0 +1,30 @@
+/* theme colors */
+$color-bg: #f5f5f5;
+$color-text: #777;
+$color-primary: #ff5f58;
+$color-secondary: #0c446f;
+$color-accent: #e97069;
+$color-link: rgb(66, 111, 121);
+$color-menu: rgb(242, 242, 242);
+$colot-tt-bg: white;
+
+$color-focus-form: #ff5f58;
+$color-footer: #ddd;
+$color-card-gray: #6e6e6e;
+$color-actions-gray: #676767;
+
+$short-opacity: opacity 0.2s ease-out;
+$short-transition: all 0.15s ease-out;
+$default-transition: all 0.3s ease-out;
+$anima-beizer: all 0.25s cubic-bezier(0.71, 0.31, 0.25, 1);
+
+/* Custom typography */
+@use 'fonts';
+$myriad-font: 'Myriad Pro', 'Roboto', sans-serif;
+
+/* active content width */
+$max-cw: 1600px;
+$max-acw: 1580px;
+/* Dialog boxes */
+$dialog-bg: rgba(0, 0, 0, 0.66);
+$header-height: 53px;

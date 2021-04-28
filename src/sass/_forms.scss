@@ -1,0 +1,167 @@
+// Basic Material Design style overwriting
+body {
+  .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: $color-text;
+  }
+  .mdc-text-field--filled {
+    height: 46px;
+    vertical-align: middle;
+  }
+  .mdc-text-field {
+    padding: 0;
+    &.mdc-text-field--outlined {
+      position: relative;
+      padding: 0 16px;
+      bottom: 3px;
+      &.mdc-text-field--textarea {
+        height: auto;
+        padding: 0;
+      }
+    }
+  }
+  .mdc-text-field--filled .mdc-floating-label {
+    left: 0;
+  }
+  .mdc-text-field .mdc-text-field__input {
+    caret-color: $color-focus-form;
+    caret-color: $color-focus-form;
+    caret-color: var(--mdc-theme-primary, $color-focus-form);
+  }
+  &:not(.mdc-text-field--disabled).mdc-text-field--focused {
+    .mdc-notched-outline__leading,
+    .mdc-notched-outline__trailing,
+    .mdc-notched-outline__notch {
+      border-color: $color-focus-form;
+      border-color: $color-focus-form;
+      border-color: var(--mdc-theme-primary, $color-focus-form);
+    }
+  }
+  .mdc-text-field--focused:not(.mdc-text-field--disabled) {
+    .mdc-floating-label {
+      color: $color-focus-form;
+      color: $color-focus-form;
+      color: var(--mdc-theme-primary, $color-focus-form);
+    }
+  }
+  .textarea {
+    display: inline-block;
+    position: relative;
+    .mdc-text-field-helper-line {
+      position: absolute;
+      bottom: 0;
+      right: 7px;
+      padding: 0;
+    }
+  }
+  // Custom checkboxes & radios style
+  .mdc-checkbox
+    .mdc-checkbox__native-control:enabled:checked
+    ~ .mdc-checkbox__background,
+  .mdc-checkbox
+    .mdc-checkbox__native-control:enabled:indeterminate
+    ~ .mdc-checkbox__background,
+  .mdc-checkbox
+    .mdc-checkbox__native-control[data-indeterminate='true']:enabled
+    ~ .mdc-checkbox__background {
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+  .mdc-radio
+    .mdc-radio__native-control:enabled:checked
+    + .mdc-radio__background
+    .mdc-radio__outer-circle,
+  .mdc-radio .mdc-radio__native-control:enabled + .mdc-radio__background,
+  .mdc-radio
+    .mdc-radio__native-control:enabled
+    + .mdc-radio__background
+    .mdc-radio__inner-circle {
+    border-color: $color-primary;
+  }
+  .mdc-list.default {
+    padding: 1em 0;
+  }
+  .mdc-list-item__graphic {
+    margin-right: 16px;
+  }
+  /* Custom SWITH color */
+  .mdc-switch.mdc-switch--checked {
+    .mdc-switch__thumb {
+      border-color: $color-primary;
+    }
+    .mdc-switch__track {
+      background-color: $color-primary;
+    }
+  }
+}
+/* 
+remove before buiud your own style
+*/
+
+.simple-form {
+  margin: 0 -0.5em;
+  .mdc-text-field {
+    width: auto;
+    margin: 1em 0.5em;
+  }
+}
+.form-block {
+  padding: 1em 0;
+}
+#loginForm {
+  .form-group {
+    margin: 1em -0.5em;
+    .mdc-text-field {
+      margin: 0 0.5em 0.5em;
+    }
+    .mdc-button {
+      margin: 0 0.5em;
+    }
+  }
+}
+.form-group {
+  padding: 1em 0;
+}
+.inline {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: $color-text;
+  -webkit-box-shadow: 0 0 0px 1000px $color-bg inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.on-off {
+  padding: 1.4em 0;
+  .switch-label {
+    padding-left: 0.7em;
+    span {
+      font-weight: 500;
+    }
+  }
+  .mdc-switch + .switch-label .toggle--on {
+    display: none;
+  }
+  .switch-label .toggle--off {
+    display: inline-block;
+  }
+  .mdc-switch--checked + .switch-label .toggle--on {
+    display: inline-block;
+    color: $color-primary;
+  }
+  .mdc-switch--checked + .switch-label .toggle--off {
+    display: none;
+  }
+}
+// Global form elements styles

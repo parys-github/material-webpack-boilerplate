@@ -1,0 +1,106 @@
+@use '../../node_modules/accordion/src/accordion.css';
+
+.accordion {
+  margin-top: 1em;
+  border-radius: 4px;
+}
+.accordion-item {
+  box-sizing: border-box;
+  border: 0;
+  min-width: 100%;
+  &:nth-child(1) {
+    border-radius: 4px 4px 0 0;
+    .headline {
+      border-radius: inherit;
+    }
+  }
+  &:last-child.open {
+    > .accordion-body {
+      border-radius: 0 0 4px 4px;
+    }
+  }
+  &:last-child.closed {
+    border-radius: 0 0 4px 4px;
+  }
+  &.open {
+    .headline {
+      background-color: $color-primary;
+    }
+  }
+  &:focus {
+    border: none;
+    outline: none;
+  }
+  > .headline {
+    position: relative;
+    padding: 0 32px 0 46px;
+    font-size: 18px;
+    line-height: 24px;
+    min-height: 48px;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    font-family: $myriad-font;
+    color: #fff;
+    background: $color-secondary;
+    transition: $default-transition;
+    .title {
+      position: relative;
+      padding-top: 14px;
+    }
+    i {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      font-size: 26px;
+      transform: translate(0, -50%);
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    &:before {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.15);
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: 0;
+      content: '';
+      display: block;
+    }
+  }
+  div[aria-expanded='true'] {
+    background-color: $color-primary;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+  .accordion-body {
+    background-color: white;
+    padding: 20px;
+    display: block;
+  }
+}
+.accordion-arrow {
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(0, -50%);
+  transition: all 0.4s;
+
+  > .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+  }
+}
+.accordion-item.open .accordion-arrow {
+  transform: rotate(180deg) translate(0, -50%);
+}

@@ -1,0 +1,79 @@
+.mdc-tab-bar {
+  //   border-bottom: solid 1px #e1e1e1;
+  background-color: #eaeaea;
+  border-radius: 4px 4px 0 0;
+  .mdc-tab {
+    transition: $default-transition;
+    border-right: solid 1px #ddd;
+    box-shadow: inset 0 -1px 3px #57575726;
+    &:first-child {
+      &.mdc-tab--active {
+        border-radius: 4px 0 0 0;
+      }
+    }
+    &:last-child {
+      border-right: none;
+      &.mdc-tab--active {
+        border-radius: 0 4px 0 0;
+      }
+    }
+    .mdc-tab-indicator {
+      pointer-events: visible;
+    }
+    .material-icons {
+      position: relative;
+      margin-top: -2px;
+    }
+    &:hover {
+      background-color: #ffffffa1;
+    }
+    &.mdc-tab--active {
+      background-color: white;
+      box-shadow: none;
+      .mdc-ripple-upgraded--background-focused:before,
+      .mdc-ripple-upgraded--background-focused:after {
+        opacity: 0;
+      }
+    }
+  }
+}
+.tab-body {
+  opacity: 0;
+  display: none;
+  &.body-animated {
+    transition: $default-transition;
+    &.tab-body--active {
+      animation: fadeInFromNone 0.55s ease-in;
+    }
+  }
+  h4 {
+    padding-bottom: 0.6em;
+    font-weight: 300;
+  }
+}
+.tab-body--active {
+  display: block;
+  padding: 5px 20px 2px;
+  opacity: 1;
+}
+/* Basic tab-body animation (fadeIn) */
+@keyframes fadeInFromNone {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}

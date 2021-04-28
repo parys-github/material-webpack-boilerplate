@@ -1,0 +1,49 @@
+<!-- External link notice dialog box -->
+<div class="mdc-dialog" id="dialogMultiLinks">
+  <div class="mdc-dialog__container">
+    <div
+      class="mdc-dialog__surface"
+      role="alertdialog"
+      aria-modal="true"
+      aria-labelledby="my-dialog-title"
+      aria-describedby="my-dialog-content"
+    >
+      <h3 class="mdc-dialog__title" id="my-dialog-title">
+        You are now leaving the this website
+      </h3>
+      <div class="mdc-dialog__content" id="dialog-title">
+        <p>
+          The information a reader is about to be referred to may not comply
+          with the specific regulatory requirements. Further information
+          relevant to the default environment is available from the respective
+          company, or via the Consumer Information or Product Information. This
+          material is informational and not intended as advice. For further
+          information talk to an admin.
+        </p>
+      </div>
+      <div class="mdc-dialog__actions">
+        <button
+          type="button"
+          class="mdc-button mdc-dialog__button mdc-button--outlined"
+          data-mdc-dialog-action="close"
+        >
+          <div class="mdc-button__ripple"></div>
+          <span class="mdc-button__label label-close">Close</span>
+          <span class="mdc-button__label label-cancel">Cancel</span>
+        </button>
+        <a
+          href="#"
+          target="_blank"
+          class="mdc-button mdc-dialog__button blue-bg continue"
+          data-mdc-dialog-action="accept"
+        >
+          <div class="mdc-button__ripple"></div>
+          <span class="mdc-button__label label-continue">Continue</span>
+          <span class="mdc-button__label label-open">Open</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="mdc-dialog__scrim"></div>
+</div>
+<!-- ./External link notice dialog box -->

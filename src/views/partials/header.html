@@ -1,0 +1,48 @@
+<header class="mdc-elevation--z1 headroom">
+  <div class="header-container">
+    <!-- Title -->
+    <span>
+      <a href="./" class="brand"><img src="./../../img/logo.png" /></a>
+    </span>
+    <!-- Add spacer, to align navigation to the right -->
+    <div class="v-spacer"></div>
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+      <div class="bar bar-1"></div>
+      <div class="bar bar-3"></div>
+      <div class="bar bar-2"></div>
+    </label>
+    <nav class="mdc-navigation">
+      <a class="mdc-list-item" href="./examples.html">
+        <span class="mdc-list-item__ripple"></span>
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true"
+          >api</i
+        >
+        <span class="mdc-list-item__text">Examples</span>
+      </a>
+      <a class="mdc-list-item" href="./resources.html">
+        <span class="mdc-list-item__ripple"></span>
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true"
+          >account_tree</i
+        >
+        <span class="mdc-list-item__text">Resources</span>
+      </a>
+      <a
+        class="mdc-list-item"
+        href="https://github.com/parys-github/material-webpack-boilerplate"
+        target="_blank"
+      >
+        <span class="mdc-list-item__ripple"></span>
+        <span class="gh mdc-list-item__graphic"
+          ><img src="./../../img/icons/ghub-icon-white.svg"
+        /></span>
+        <span class="mdc-list-item__text">GitHub</span>
+      </a>
+    </nav>
+  </div>
+</header>
+<style scoped lang="scss">
+  .brand img {
+    max-height: 50px;
+  }
+</style>

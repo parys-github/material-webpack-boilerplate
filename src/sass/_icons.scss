@@ -1,0 +1,133 @@
+/* Custom icons */
+.icon-custom {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  position: relative;
+  background: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+  &.ico-npm {
+    background-image: url('./../img/icons/icon-npm.svg');
+    background-size: 28px 28px;
+    width: 28px;
+    height: 28px;
+  }
+  &.ico-google-mdl {
+    background-image: url('./../img/icons/google-mdl.svg');
+    background-size: 34px 34px;
+    width: 34px;
+    height: 34px;
+  }
+  &.ico-webpack {
+    background-image: url('./../img/icons/icon-webpack.svg');
+    background-size: 36px 38px;
+  }
+  &.ico-autoprefixer {
+    background-image: url('./../img/icons/icon-autoprefixer.svg');
+    background-size: 36px 38px;
+  }
+  &.ico-css-loader {
+    background-image: url('./../img/icons/icon-css-loader.svg');
+    background-size: 36px 38px;
+  }
+  &.ico-html-loader {
+    background-image: url('./../img/icons/icon-html-loader.svg');
+    background-size: 36px 38px;
+  }
+  &.ico-html-webpack-plugin {
+    background-image: url('./../img/icons/icon-html-webpack-plugin.svg');
+    background-size: 36px 38px;
+  }
+  &.ico-postcss-preset-env {
+    background-image: url('./../img/icons/icon-postcss-preset-env.svg');
+    background-size: 36px 38px;
+  }
+  &.ico-sass {
+    background-image: url('./../img/icons/icon-sass.svg');
+    background-size: 36px 38px;
+  }
+  &.ico-sass-loader {
+    background-image: url('./../img/icons/icon-sass-loader.svg');
+    background-size: 36px 38px;
+  }
+  &.ico-unsplash {
+    background-image: url('./../img/icons/icon-unsplash.svg');
+    background-size: 28px 28px;
+    width: 28px;
+    height: 28px;
+  }
+  &.ico-medicine {
+    background-image: url('./../img/icons/icon-medicine.svg');
+    background-size: 28px 28px;
+    width: 28px;
+    height: 28px;
+  }
+  &.ico-wasai {
+    background-image: url('./../img/icons/icon-wasai.svg');
+    background-size: 28px 28px;
+    width: 28px;
+    height: 28px;
+  }
+  &.ico-material-web {
+    background-image: url('./../img/icons/icon-material-web.svg');
+    background-size: 28px 28px;
+    width: 28px;
+    height: 28px;
+  }
+  &.ico-babel {
+    background-image: url('./../img/icons/icon-babel.svg');
+    background-size: 36px 38px;
+  }
+  &.ico-babel-loader {
+    background-image: url('./../img/icons/icon-babel-loader.svg');
+    background-size: 36px 38px;
+  }
+  &.ico-eslint {
+    background-image: url('./../img/icons/icon-eslint.svg');
+    background-size: 36px 38px;
+  }
+  &.ico-prettier {
+    background-image: url('./../img/icons/icon-prettier.svg');
+    background-size: 36px 32px;
+  }
+}
+.action-icon {
+  &:hover .icon-social {
+    opacity: 0.9;
+  }
+}
+.icon-social {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  opacity: 0.66;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+  &.ico-facebook {
+    background-image: url('./../img/icons/icon-facebook.svg');
+    background-size: 17px 24px;
+  }
+  &.ico-instagram {
+    background-image: url('./../img/icons/icon-instagram.svg');
+    background-size: 19px 20px;
+  }
+}

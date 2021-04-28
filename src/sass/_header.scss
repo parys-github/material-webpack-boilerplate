@@ -1,0 +1,190 @@
+@use 'variables';
+
+header {
+  background-color: $color-secondary;
+  border-top: solid 5px $color-accent;
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0;
+  &.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+  }
+  &.headroom--pinned {
+    transform: translateY(0%);
+  }
+  &.headroom--unpinned {
+    transform: translateY(-100%);
+  }
+  .header-container {
+    max-width: 1552px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0 2em;
+    .brand {
+      transition: $default-transition;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 80px;
+      &:hover {
+        filter: blur(0.2rem);
+      }
+      img {
+        max-height: 32px;
+      }
+    }
+    .mdc-list-item {
+      position: relative;
+      font-size: 14px;
+      font-weight: 300;
+      font-style: normal;
+      background-color: transparent;
+      display: inline-flex;
+      vertical-align: middle;
+      color: $color-menu;
+      &:after {
+        position: absolute;
+        transition: inherit;
+        display: block;
+        content: '';
+        width: calc(100% - 65px);
+        height: 4px;
+        background-color: $color-primary;
+        transition: $short-transition;
+        bottom: -4px;
+        left: 50px;
+      }
+      &:hover {
+        color: #cecece;
+        .mdc-list-item__ripple {
+          opacity: 1;
+        }
+        .gh {
+          opacity: 0.8;
+        }
+        &:after {
+          bottom: 0;
+        }
+      }
+      .gh.mdc-list-item__graphic {
+        position: relative;
+        top: -1px;
+        transition: $short-transition;
+        display: block;
+        width: 18px;
+        height: auto;
+        margin-right: 12px;
+        img {
+          max-height: 32px;
+        }
+      }
+      .mdc-list-item__ripple {
+        opacity: 0;
+      }
+      .mdc-list-item__graphic {
+        font-size: 18px;
+        margin-top: 5px;
+        margin-right: 8px;
+        color: inherit;
+      }
+    }
+  }
+  /* Mobile Nav */
+  .sidebarIconToggle {
+    display: none;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 16px;
+    right: 20px;
+    height: 28px;
+    width: 28px;
+  }
+  input[type='checkbox'] {
+    box-sizing: border-box;
+    display: none;
+  }
+  .bar {
+    transition: $default-transition;
+    box-sizing: border-box;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+  }
+  .bar-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+  }
+  .bar-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 4px;
+  }
+  .bar-3 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 4px;
+  }
+  input[type='checkbox']:checked ~ .sidebarIconToggle > .bar-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 9px;
+    background-color: #e97069;
+  }
+  input[type='checkbox']:checked ~ .sidebarIconToggle > .bar-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -5px;
+    background-color: #e97069;
+  }
+  input[type='checkbox']:checked ~ .sidebarIconToggle > .bar-3 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateX(12px);
+    margin-top: -5px;
+  }
+  input[type='checkbox']:checked ~ .mdc-navigation {
+    transform: translateX(0);
+  }
+}
+/* Nav Current Path Indicator */
+body {
+  &.examples {
+    header .header-container .mdc-list-item:nth-child(1) {
+      color: #ff463f;
+      font-weight: 400;
+      &:after {
+        bottom: 0;
+      }
+    }
+  }
+  &.resources {
+    header .header-container .mdc-list-item:nth-child(2) {
+      color: #ff463f;
+      font-weight: 400;
+      &:after {
+        bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= require('html-loader!@/views/partials/meta.html').default %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body class="examples">
+    <%=
+    require('html-loader!@/views/partials/components/loader-spinner.html').default
+    %>
+    <div class="page-container" style="opacity: 0">
+      <%= require('html-loader!@/views/partials/header.html').default %>
+      <main class="main mdc-layout__content">
+        <%= require('html-loader!@/views/content/content-examples.html').default
+        %>
+      </main>
+      <%= require('html-loader!@/views/partials/footer.html').default %>
+    </div>
+    <%=
+    require('html-loader!@/views/partials/components/dialog-licence.html').default
+    %>
+  </body>
+</html>

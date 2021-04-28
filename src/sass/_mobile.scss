@@ -1,0 +1,347 @@
+/* Material Design Adaptive Breakpoints */
+/*
+    Below you'll find CSS media queries based on the breakpoint guidance
+    published by the Material Design team. You can choose to use, customise
+    or remove these breakpoints based on your needs.
+    http://www.google.com/design/spec/layout/adaptive-ui.html#adaptive-ui-breakpoints
+   */
+
+/* mobile-small */
+@media all and (min-width: 0) and (max-width: 360px) and (orientation: portrait) {
+  body {
+    main {
+      .col-4 {
+        min-width: 100%;
+      }
+    }
+  }
+}
+/* mobile-large */
+@media all and (min-width: 361px) and (orientation: portrait) {
+  body {
+    main {
+      #loginForm .form-group {
+        margin: 0;
+      }
+    }
+  }
+}
+/* mobile-small-landscape */
+@media all and (min-width: 0) and (max-width: 480px) and (orientation: landscape) {
+}
+/* mobile-large-landscape */
+@media all and (min-width: 481px) and (orientation: landscape) {
+}
+/* tablet-small-landscape */
+@media all and (min-width: 600px) and (max-width: 960px) and (orientation: landscape) {
+}
+/* tablet-large-landscape */
+@media all and (min-width: 961px) and (orientation: landscape) {
+}
+/* tablet-small */
+@media all and (min-width: 600px) and (orientation: portrait) {
+}
+/* tablet-large */
+@media all and (min-width: 601px) and (max-width: 840px) and (orientation: portrait) {
+}
+/* desktop-x-small-landscape */
+@media all and (min-width: 0) and (max-width: 480px) and (orientation: landscape) {
+}
+/* desktop-x-small */
+@media all and (min-width: 0) and (max-width: 480px) and (max-aspect-ratio: 4/3) {
+}
+/* desktop-small-landscape */
+@media all and (min-width: 481px) and (max-width: 840px) and (orientation: landscape) {
+}
+/* desktop-small */
+@media all and (min-width: 481px) and (max-width: 840px) and (max-aspect-ratio: 4/3) {
+}
+/* desktop-medium-landscape */
+@media all and (min-width: 841px) and (max-width: 1280px) and (orientation: landscape) {
+}
+/* desktop-medium */
+@media all and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4/3) {
+}
+
+@media only screen and (min-width: 1600px) {
+  /* desktop-largest */
+}
+@media only screen and (max-width: 1599px) {
+  .main {
+    .info {
+      margin: 1.7em 1.4em 1em;
+      left: auto;
+      transform: translate(0, 0);
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main {
+    .content {
+      &.mixed-cards {
+        max-width: 1574px;
+      }
+    }
+    .simple-form {
+      .mdc-text-field {
+        min-width: 368px;
+      }
+    }
+    [class*='col-'] {
+      width: 24.5%;
+    }
+  }
+}
+@media only screen and (max-width: 1199px) {
+  main {
+    .hero {
+      height: 25vh;
+      max-height: 320px;
+    }
+  }
+}
+@media only screen and (max-width: 839px) {
+  header {
+    &.headroom--pinned,
+    &.headroom--unpinned {
+      position: fixed !important;
+      transform: translateY(0%);
+      top: 0;
+    }
+    .header-container .brand {
+      margin-left: -8px;
+      img {
+        max-height: 36px;
+        padding-top: 8px;
+      }
+    }
+    height: $header-height;
+    label.sidebarIconToggle {
+      display: block;
+    }
+    /* Mobile navigation setup */
+    .mdc-navigation {
+      background-color: $color-secondary;
+      transform: translateX(-250px);
+      transition: transform 250ms ease-in-out;
+      position: absolute;
+      top: $header-height;
+      transform: translateX(210px);
+      right: 0;
+      height: 100vh;
+      width: 200px;
+      box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+        0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+      border-top: solid 1px #365a79;
+      &:before {
+        position: absolute;
+        display: none;
+        content: '';
+        right: 200px;
+        opacity: 0;
+        top: -1px;
+        min-width: 870px;
+        height: 100vh;
+        background-color: #00000080;
+        &:hover {
+          background-color: red !important;
+        }
+      }
+      .mdc-list-item {
+        display: block;
+        border-bottom: solid 1px #365a79;
+        padding: 1em 0.6em 0 1.6em;
+        &:after {
+          display: none;
+        }
+        .gh.mdc-list-item__graphic {
+          display: inline-flex;
+        }
+      }
+    }
+    input[type='checkbox']:checked ~ .mdc-navigation {
+      transform: translateX(0);
+      &:before {
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
+  .main {
+    .resources-lists,
+    .accordions {
+      .mdc-layout-grid__cell--span-6 {
+        grid-column-end: span 12;
+      }
+    }
+    .content {
+      padding: 0;
+      &.cards {
+        padding: 0 8px;
+      }
+    }
+    .hero {
+      height: 21vh;
+      max-height: 220px;
+      max-height: 220px;
+    }
+    .main {
+      h1 {
+        font-size: 2.4em;
+      }
+    }
+    .mdc-layout-grid__cell--span-12-tablet {
+      grid-column-end: span 12;
+    }
+  }
+  .pre-footer {
+    .mdc-layout-grid__cell {
+      padding: 0 8px 16px;
+    }
+  }
+  body.resources,
+  body.examples {
+    h1 {
+      padding: 0 0.25em;
+    }
+  }
+  .mdc-dialog {
+    &.yt-720 {
+      .mdc-dialog__container {
+        .mdc-dialog__surface {
+          width: 100%;
+          height: auto;
+          iframe {
+            width: 100%;
+            min-width: 100%;
+            height: auto;
+            min-height: 200px;
+          }
+        }
+      }
+    }
+    .video-dialog {
+      iframe {
+        max-width: 100%;
+      }
+    }
+  }
+}
+@media (min-width: 600px) and (max-width: 640px) {
+  .mixed-cards {
+    .sm-col-6 {
+      min-width: 49%;
+      max-width: 49%;
+    }
+  }
+}
+@media only screen and (max-width: 599px) {
+  .home {
+    .card {
+      .action-icons .action-icon {
+        position: relative;
+        bottom: -16px;
+        right: -4px;
+      }
+    }
+  }
+  .main {
+    .demo-grid {
+      min-width: auto;
+    }
+    h1 {
+      font-size: 2em;
+      padding: 0 0.7em;
+    }
+    h2 {
+      font-size: 1.8em;
+      margin-top: 0;
+    }
+    .hero {
+      h3 {
+        bottom: auto;
+        top: -0.5em;
+        right: auto;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .content.cards {
+      padding: 0;
+      &.mixed-cards {
+        margin: 0 8px;
+      }
+    }
+    .card {
+      min-width: auto;
+    }
+    .col-4 {
+      min-width: 100%;
+    }
+    .simple-form {
+      margin: 0;
+    }
+    #loginForm {
+      padding: 0;
+      .form-group {
+        .mdc-button {
+          margin: 0;
+        }
+      }
+    }
+    .mdc-text-field,
+    .textarea,
+    #loginForm .form-group .mdc-text-field,
+    .button-container.inline {
+      min-width: 100%;
+      margin: 16px 0;
+    }
+    .mdc-list.default {
+      .mdc-list-item {
+        padding-left: 0;
+        &:after {
+          bottom: 0;
+          left: 0px;
+          width: calc(100% - 2px);
+        }
+      }
+    }
+    .inner-heading {
+      margin-top: 1.2em;
+    }
+  }
+  .xs-col-12 {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  footer {
+    .mdc-layout-grid__cell--span-3 {
+      width: 100%;
+      grid-column-end: span 12;
+    }
+    .footer__left-section {
+      text-align: center;
+      width: 100%;
+    }
+    .v-spacer {
+      display: none;
+    }
+    .footer__right-section {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 1em;
+      padding-right: 0 !important;
+    }
+  }
+}
+@media (min-width: 600px) and (max-width: 839px) {
+  /**/
+}
+/* Cards custom view */
+@media only screen and (min-width: 992px) {
+  [class*='col-'] {
+    width: 32%;
+  }
+}

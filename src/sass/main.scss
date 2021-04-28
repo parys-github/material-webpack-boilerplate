@@ -1,0 +1,57 @@
+/* Material custom theme */
+@use "@material/theme" with (
+  $primary: #ff5f58,
+  $on-primary: #fff
+);
+
+/* Material design */
+@use "@material/layout-grid/mdc-layout-grid";
+@use "@material/button/mdc-button";
+@use "@material/elevation/mdc-elevation";
+@use "@material/card";
+@use "@material/drawer";
+@use "@material/list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/dialog";
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/checkbox";
+@use "@material/radio/styles";
+@use "@material/form-field";
+@use "@material/textfield";
+@use "@material/switch";
+@use "@material/tab-bar/mdc-tab-bar";
+@use "@material/tab-scroller/mdc-tab-scroller";
+@use "@material/tab-indicator/mdc-tab-indicator";
+@use "@material/tab/mdc-tab";
+@use "@material/tooltip/styles" as tooltip;
+
+@include card.core-styles;
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include drawer.modal-core-styles;
+@include list.core-styles;
+@include dialog.core-styles;
+@include textfield.core-styles;
+@include checkbox.core-styles;
+@include form-field.core-styles;
+@include switch.core-styles;
+
+/* Custom styles */
+@import 'variables';
+@import 'typography';
+@import 'global';
+@import 'header';
+@import 'footer';
+@import 'fonts';
+@import 'icons';
+@import 'cards';
+@import 'lists';
+@import 'accordion';
+@import 'forms';
+@import 'dialog';
+@import 'tabs';
+@import 'mobile';
+@import 'print';

@@ -1,0 +1,61 @@
+body {
+  .mdc-dialog {
+    z-index: 11;
+    .mdc-dialog__content.pure-video {
+      padding: 0;
+    }
+    &.yt-720 {
+      .mdc-dialog__surface {
+        width: 720px;
+        height: 405px;
+        overflow: hidden;
+        max-width: 100%;
+      }
+      .close-tr {
+        top: -210px;
+      }
+    }
+    .mdc-dialog__scrim {
+      background-color: $dialog-bg;
+    }
+    &.dark {
+      .mdc-dialog__title,
+      .continue {
+        background-color: $color-secondary;
+        color: white;
+      }
+      .mdc-dialog__content {
+        padding-top: 1em;
+        padding-bottom: 0;
+      }
+    }
+  }
+  .mdc-dialog__content {
+    &.pure-video {
+      padding: 0;
+    }
+  }
+  .close-tr {
+    position: relative;
+    z-index: 9;
+    width: 37px;
+    height: 37px;
+    overflow: hidden;
+    background-color: #fff;
+    left: calc(100% - 16px);
+    top: -160px;
+    border-radius: 50%;
+    &:hover {
+      opacity: 0;
+    }
+    i {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 37px;
+    }
+  }
+  .pure-video {
+    margin-bottom: -7px;
+  }
+}

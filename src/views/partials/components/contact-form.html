@@ -1,0 +1,16 @@
+<form>
+  <input placeholder="Name" type="text" value="" required />
+  <input
+    placeholder="Email address"
+    type="email"
+    onblur="this.setAttribute('value', this.value);"
+    value=""
+    required
+  />
+  <span class="validation-text">Please enter a valid email address.</span>
+  <input placeholder="Location" type="text" value="" required />
+  <div class="flex">
+    <textarea placeholder="Message" rows="1" required></textarea>
+  </div>
+  <button>Send</button>
+</form>
