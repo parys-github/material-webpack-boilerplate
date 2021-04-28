@@ -1,0 +1,11 @@
+*.log
+## File-based project format:
+*.iws
+**/.idea/*
+*.sublime-*
+**/._.DS_Store
+# dependencies
+node_modules/
+dist/
+.htaccess
+**/.DS_Store
