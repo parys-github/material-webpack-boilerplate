@@ -19,7 +19,7 @@
 
 > Sample template contain**Accordion Module**feature fully compatible witch other Material components.
 
-#### Working **DEMO** available at [https://mdpack.vajracode.net](https://mdpack.vajracode.net/)
+#### Working **DEMO** available at [mdpack.vajracode.net](https://mdpack.vajracode.net/)
 
 ## Installation
 
