@@ -374,6 +374,7 @@ Custom position only for default mdc-icon-button element
       background-color: $colot-tt-bg;
       .mdc-tooltip__surface {
         background-color: inherit;
+        text-align: left;
       }
     }
   }
