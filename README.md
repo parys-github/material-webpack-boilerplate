@@ -4,20 +4,20 @@
 
 ![Screenshot](https://mdpack.vajracode.net/screenshot.jpg "Screenshot")
 
->Webpack 5 with Material UI Components Boilerplate. Compilation contains basic Material template. Package using Babel, PostCSS and Sass with a hot dev server and fully configured production build processing.
+> Webpack 5 with Material UI Components Boilerplate. Compilation contains basic Material template. Package is using Babel, PostCSS and Sass with a hot dev server. The project is fully configured and ready to generate the final production process.
 
->Beside of that boilerplate basic template has implemented bunch of useful features like:
+> Beside of that boilerplate basic template has implemented bunch of useful features like:
 - custom font,
 - custom icons,
 - scroll to top,
 - partials templates contains independent contents
->global partial modules like:
+> Global partial modules like:
 - analytics (soon)
 - hero section (soon),
 - footers,
 - header contains desktop and **mobile navigation** supported with **Headroom.js** feature.
 
->Sample template contain**Accordion Module**feature fully compatible witch other Material components.
+> Sample template contain**Accordion Module**feature fully compatible witch other Material components.
 
 #### Working demo available [here](https://mdpack.vajracode.net/)
 
