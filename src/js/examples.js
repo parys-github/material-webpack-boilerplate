@@ -2,6 +2,7 @@ import { MDCTooltip } from '@material/tooltip'
 import { MDCTabBar } from '@material/tab-bar'
 import { MDCList } from '@material/list'
 import { MDCMenu } from '@material/menu'
+import { MDCSelect } from '@material/select'
 import { Corner } from '@material/menu-surface/constants'
 import { MDCTextField } from '@material/textfield'
 import { MDCSwitch } from '@material/switch'
@@ -117,17 +118,6 @@ for (let index = 0; index < dialogOpenersCollection.length; index += 1) {
 }
 
 // Initialize MDCMenu with position
-/*
-const menu = new MDCMenu(document.querySelector('.mdc-menu'))
-const menuToggleButton = document.querySelector('.menu-toggle-button')
-const menuToggleButtonHeight = menuToggleButton.getBoundingClientRect.height
-menu.setAnchorMargin({ top: menuToggleButtonHeight })
-menu.setAnchorCorner(Corner.BOTTOM_LEFT)
-
-menuToggleButton.addEventListener('click', () => {
-  menu.open = !menu.open
-})
-*/
 
 const menuEls = Array.from(document.querySelectorAll('.mdc-menu'))
 
@@ -147,3 +137,10 @@ menuEls.forEach((menuEl) => {
 
   menu.setAnchorCorner(Corner.BOTTOM_START)
 })
+
+// Initialize MDCSelect
+const selectCollection = document.querySelectorAll('.mdc-select')
+const selects = []
+for (let index = 0; index < selectCollection.length; index += 1) {
+  selects.push(new MDCSelect(selectCollection[index]))
+}
