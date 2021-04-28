@@ -19,6 +19,8 @@
 
 >Sample template contain**Accordion Module**feature fully compatible witch other Material components.
 
+#### Working demo available [here](https://mdpack.vajracode.net/)
+
 ## Installation
 
 Clone this repo and npm install.
