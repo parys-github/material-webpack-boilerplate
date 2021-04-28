@@ -1094,7 +1094,9 @@
 <section class="content">
   <div class="mdc-layout-grid container">
     <div class="mdc-layout-grid__inner">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-12-tablet"
+      >
         <h2>Text fields</h2>
         <div class="simple-form">
           <label class="mdc-text-field mdc-text-field--outlined">
@@ -1149,6 +1151,77 @@
             </div>
           </div>
         </div>
+        <!-- MDC Select Eleent -->
+        <div class="mdc-select mdc-select--outlined">
+          <div
+            class="mdc-select__anchor"
+            aria-labelledby="outlined-select-label"
+          >
+            <span class="mdc-notched-outline">
+              <span class="mdc-notched-outline__leading"></span>
+              <span class="mdc-notched-outline__notch">
+                <span id="outlined-select-label" class="mdc-floating-label"
+                  >Pick one option</span
+                >
+              </span>
+              <span class="mdc-notched-outline__trailing"></span>
+            </span>
+            <span class="mdc-select__selected-text-container">
+              <span
+                id="demo-selected-text"
+                class="mdc-select__selected-text"
+              ></span>
+            </span>
+            <span class="mdc-select__dropdown-icon">
+              <svg
+                class="mdc-select__dropdown-icon-graphic"
+                viewBox="7 10 10 5"
+                focusable="false"
+              >
+                <polygon
+                  class="mdc-select__dropdown-icon-inactive"
+                  stroke="none"
+                  fill-rule="evenodd"
+                  points="7 10 12 15 17 10"
+                ></polygon>
+                <polygon
+                  class="mdc-select__dropdown-icon-active"
+                  stroke="none"
+                  fill-rule="evenodd"
+                  points="7 15 12 10 17 15"
+                ></polygon>
+              </svg>
+            </span>
+            <span class="mdc-line-ripple"></span>
+          </div>
+
+          <!-- Other elements from the select remain. -->
+          <div
+            class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth"
+          >
+            <ul class="mdc-list mdc-list--dense">
+              <li class="mdc-list-item" data-value="">
+                <span class="mdc-list-item__ripple"></span>
+              </li>
+              <li class="mdc-list-item" data-value="grains">
+                <span class="mdc-list-item__ripple"></span>
+                <span class="mdc-list-item__text">Option 1</span>
+              </li>
+              <li
+                class="mdc-list-item mdc-list-item--selected"
+                data-value="vegetables"
+                aria-selected="true"
+              >
+                <span class="mdc-list-item__ripple"></span>
+                <span class="mdc-list-item__text">Option 2</span>
+              </li>
+              <li class="mdc-list-item" data-value="fruit">
+                <span class="mdc-list-item__ripple"></span>
+                <span class="mdc-list-item__text">Option 3</span>
+              </li>
+            </ul>
+          </div>
+        </div>
         <form class="form-block" id="loginForm">
           <h4>Login Form Example</h4>
           <div class="form-group">
@@ -1197,7 +1270,9 @@
           </div>
         </form>
       </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-12-tablet"
+      >
         <h2>Switch</h2>
         <div class="on-off">
           <div class="mdc-switch">
@@ -1219,7 +1294,7 @@
           >
         </div>
         <h2 class="inner-heading">Tooltips</h2>
-        <div class="mdc-tooltip-wrapper--rich">
+        <div class="mdc-tooltip-wrapper--rich center-tablet">
           <button
             class="mdc-button mdc-button--raised flat lg rounded mdc-ripple-upgraded"
             data-tooltip-id="tt-rich"
@@ -1263,7 +1338,7 @@
           </div>
         </div>
         <h4>Basic Tooltips</h4>
-        <div class="tooltips-collection">
+        <div class="tooltips-collection center-tablet">
           <div class="item-block">
             <table class="tt-table mdc-elevation--z1">
               <tr>
@@ -1496,158 +1571,6 @@
       <div
         class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet"
       >
-        <h2>Tabs</h2>
-        <div class="card mdc-elevation--z1">
-          <!-- Tabs example -->
-          <div class="mdc-tab-bar" role="tablist">
-            <div class="mdc-tab-scroller">
-              <div class="mdc-tab-scroller__scroll-area">
-                <div class="mdc-tab-scroller__scroll-content">
-                  <button
-                    class="mdc-tab mdc-tab--active"
-                    role="tab"
-                    aria-selected="true"
-                    tabindex="0"
-                  >
-                    <span class="mdc-tab__content"
-                      ><span
-                        class="mdc-tab__icon material-icons"
-                        aria-hidden="true"
-                        >pets</span
-                      >
-                      <span class="mdc-tab__text-label">Wild Animals</span>
-                    </span>
-                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                      <span
-                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
-                      ></span>
-                    </span>
-                    <span class="mdc-tab__ripple"></span>
-                  </button>
-                  <button
-                    class="mdc-tab mdc-tab"
-                    role="tab"
-                    aria-selected="true"
-                    tabindex="0"
-                  >
-                    <span class="mdc-tab__content">
-                      <span
-                        class="mdc-tab__icon material-icons"
-                        aria-hidden="true"
-                        >bug_report</span
-                      >
-                      <span class="mdc-tab__text-label">Insects Zone</span>
-                    </span>
-                    <span class="mdc-tab-indicator mdc-tab-indicator">
-                      <span
-                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
-                      ></span>
-                    </span>
-                    <span class="mdc-tab__ripple"></span>
-                  </button>
-                  <button
-                    class="mdc-tab mdc-tab"
-                    role="tab"
-                    aria-selected="true"
-                    tabindex="0"
-                  >
-                    <span class="mdc-tab__content">
-                      <span
-                        class="mdc-tab__icon material-icons"
-                        aria-hidden="true"
-                        >cruelty_free</span
-                      >
-                      <span class="mdc-tab__text-label">Rabbit Hole</span>
-                    </span>
-                    <span class="mdc-tab-indicator mdc-tab-indicator">
-                      <span
-                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
-                      ></span>
-                    </span>
-                    <span class="mdc-tab__ripple"></span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tab-body body-animated tab-body--active">
-            <h4>
-              <span
-                class="mdc-tab__icon material-icons inline-ico"
-                aria-hidden="true"
-                >pets</span
-              >
-              Wild animals content.
-            </h4>
-            <div class="media media--16-9">
-              <img
-                src="https://images.unsplash.com/photo-1596174621919-3cd8eedaa316?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                alt=""
-                width="640"
-                height="460"
-              />
-            </div>
-            <p>
-              <span
-                class="mdc-tab__icon material-icons inline-ico"
-                aria-hidden="true"
-                >pets</span
-              >Lorem Ipsum here
-            </p>
-          </div>
-          <div class="tab-body body-animated">
-            <h4>
-              <span
-                class="mdc-tab__icon material-icons inline-ico"
-                aria-hidden="true"
-                >bug_report</span
-              >
-              Insects zone content
-            </h4>
-            <div class="media media--16-9">
-              <img
-                src="https://images.unsplash.com/photo-1568061463454-81194d073666?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                alt=""
-                width="640"
-                height="460"
-              />
-            </div>
-            <p>
-              <span
-                class="mdc-tab__icon material-icons inline-ico"
-                aria-hidden="true"
-                >bug_report</span
-              >Lorem Ipsum here
-            </p>
-          </div>
-          <div class="tab-body body-animated">
-            <h4>
-              <span
-                class="mdc-tab__icon material-icons inline-ico"
-                aria-hidden="true"
-                >cruelty_free</span
-              >
-              Rabbit hole content
-            </h4>
-            <div class="media media--16-9">
-              <img
-                src="https://images.unsplash.com/photo-1564650211163-21049f1b683a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                alt=""
-                width="640"
-                height="460"
-              />
-            </div>
-            <p>
-              <span
-                class="mdc-tab__icon material-icons inline-ico"
-                aria-hidden="true"
-                >cruelty_free</span
-              >Lorem Ipsum here
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
         <h2>Dialogs</h2>
         <h5>Dialog box with custom URL</h5>
         <p>
@@ -1832,6 +1755,160 @@
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-12-tablet"
+      >
+        <h2>Tabs</h2>
+        <div class="card mdc-elevation--z1">
+          <!-- Tabs example -->
+          <div class="mdc-tab-bar" role="tablist">
+            <div class="mdc-tab-scroller">
+              <div class="mdc-tab-scroller__scroll-area">
+                <div class="mdc-tab-scroller__scroll-content">
+                  <button
+                    class="mdc-tab mdc-tab--active"
+                    role="tab"
+                    aria-selected="true"
+                    tabindex="0"
+                  >
+                    <span class="mdc-tab__content"
+                      ><span
+                        class="mdc-tab__icon material-icons"
+                        aria-hidden="true"
+                        >pets</span
+                      >
+                      <span class="mdc-tab__text-label">Wild Animals</span>
+                    </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                      <span
+                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                      ></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </button>
+                  <button
+                    class="mdc-tab mdc-tab"
+                    role="tab"
+                    aria-selected="true"
+                    tabindex="0"
+                  >
+                    <span class="mdc-tab__content">
+                      <span
+                        class="mdc-tab__icon material-icons"
+                        aria-hidden="true"
+                        >bug_report</span
+                      >
+                      <span class="mdc-tab__text-label">Insects Zone</span>
+                    </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator">
+                      <span
+                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                      ></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </button>
+                  <button
+                    class="mdc-tab mdc-tab"
+                    role="tab"
+                    aria-selected="true"
+                    tabindex="0"
+                  >
+                    <span class="mdc-tab__content">
+                      <span
+                        class="mdc-tab__icon material-icons"
+                        aria-hidden="true"
+                        >cruelty_free</span
+                      >
+                      <span class="mdc-tab__text-label">Rabbit Hole</span>
+                    </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator">
+                      <span
+                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                      ></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-body body-animated tab-body--active">
+            <h4>
+              <span
+                class="mdc-tab__icon material-icons inline-ico"
+                aria-hidden="true"
+                >pets</span
+              >
+              Wild animals content.
+            </h4>
+            <div class="media media--16-9">
+              <img
+                src="https://images.unsplash.com/photo-1596174621919-3cd8eedaa316?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt=""
+                width="640"
+                height="460"
+              />
+            </div>
+            <p>
+              <span
+                class="mdc-tab__icon material-icons inline-ico"
+                aria-hidden="true"
+                >pets</span
+              >Lorem Ipsum here
+            </p>
+          </div>
+          <div class="tab-body body-animated">
+            <h4>
+              <span
+                class="mdc-tab__icon material-icons inline-ico"
+                aria-hidden="true"
+                >bug_report</span
+              >
+              Insects zone content
+            </h4>
+            <div class="media media--16-9">
+              <img
+                src="https://images.unsplash.com/photo-1568061463454-81194d073666?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt=""
+                width="640"
+                height="460"
+              />
+            </div>
+            <p>
+              <span
+                class="mdc-tab__icon material-icons inline-ico"
+                aria-hidden="true"
+                >bug_report</span
+              >Lorem Ipsum here
+            </p>
+          </div>
+          <div class="tab-body body-animated">
+            <h4>
+              <span
+                class="mdc-tab__icon material-icons inline-ico"
+                aria-hidden="true"
+                >cruelty_free</span
+              >
+              Rabbit hole content
+            </h4>
+            <div class="media media--16-9">
+              <img
+                src="https://images.unsplash.com/photo-1564650211163-21049f1b683a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt=""
+                width="640"
+                height="460"
+              />
+            </div>
+            <p>
+              <span
+                class="mdc-tab__icon material-icons inline-ico"
+                aria-hidden="true"
+                >cruelty_free</span
+              >Lorem Ipsum here
+            </p>
           </div>
         </div>
       </div>
