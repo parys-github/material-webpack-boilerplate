@@ -4,7 +4,7 @@
 
 ![Screenshot](https://mdpack.vajracode.net/screenshot.jpg "Screenshot")
 
->Webpack 5 with Material UI Components Boilerplate. Compilation contain basic Material template. Package using Babel, PostCSS and Sass with a hot dev server and fully configured production build processing.
+>Webpack 5 with Material UI Components Boilerplate. Compilation contains basic Material template. Package using Babel, PostCSS and Sass with a hot dev server and fully configured production build processing.
 
 >Beside of that boilerplate basic template has implemented bunch of useful features like:
 - custom font,
@@ -89,7 +89,7 @@ cd dist && http-server
 
 ### Loaders
 
-- [`babel-loader`](https://webpack.js.org/loaders/babel-loader/) - Transpile files with Babel and webpack
+- [`babel-loader`](https://webpack.js.org/loaders/babel-loader/) - Transpiling files with Babel and Webpack
 - [`sass-loader`](https://webpack.js.org/loaders/sass-loader/) - Load SCSS and compile to CSS
 - [`node-sass`](https://github.com/sass/node-sass) - Node Sass
 - [`postcss-loader`](https://webpack.js.org/loaders/postcss-loader/) - Process CSS with PostCSS
@@ -105,12 +105,17 @@ cd dist && http-server
 - [`mini-css-extract-plugin`](https://github.com/webpack-contrib/mini-css-extract-plugin) - Extract CSS into separate files
 - [`css-minimizer-webpack-plugin`](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/) - Optimize and minimize CSS assets
 
+### Additional modules
+
+- [`Accordion`](https://www.npmjs.com/package/accordion) - Silky-smooth accordion widget
+- [`Headroom.js`](https://www.npmjs.com/package/headroom.js) - Lightweight, high-performance JS widget
+
 ### Linters
 
-- [`eslint`](https://github.com/eslint/eslint) - Enforce styleguide across application
+- [`eslint`](https://github.com/eslint/eslint) - Enforce style guide across application
 - [`eslint-config-airbnb-base`](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) - Base styleguide to enforce rules
-- [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) - Implment prettier rules
-- [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import) - Implment import rules
+- [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) - Implement prettier rules
+- [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import) - Implement import rules
 - [`eslint-plugin-prettier`](https://github.com/prettier/eslint-plugin-prettier) - Dependency for prettier usage with ESLint
 - [`eslint-import-resolver-webpack`](https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers/webpack) - Throw exceptions for import/export in webpack
 - [`eslint-webpack-plugin`](https://github.com/webpack-contrib/eslint-webpack-plugin) - ESLint configuration for webpack
@@ -138,7 +143,7 @@ cd dist && http-server
 │   └── ...
 ├── public/                 # Static assets directory
 │   └── ...
-├── src/                    # Project source
+├── src/                    # Project source files
 │   ├── fonts/              # Custom fonts
 │   │   └── ...
 │   ├── img/                # Image assets
@@ -163,8 +168,8 @@ cd dist && http-server
 ├── .prettierrc.json        # Prettier formatting rules
 ├── LICENSE                 # MIT License (MIT)
 ├── package.json            # Required modules packages
-├── postcss.config.js       #
-└── README.md               #
+├── postcss.config.js       # Styles transforming conf
+└── README.md               # Project instruction
 ```
 
 ## License
