@@ -11,6 +11,7 @@ import { MDCCheckbox } from '@material/checkbox'
 import { MDCRadio } from '@material/radio'
 import Accordion from 'accordion/src/accordion.mjs'
 import { MDCDialog } from '@material/dialog'
+import { MDCSlider } from '@material/slider'
 
 require('./main')
 
@@ -143,4 +144,11 @@ const selectCollection = document.querySelectorAll('.mdc-select')
 const selects = []
 for (let index = 0; index < selectCollection.length; index += 1) {
   selects.push(new MDCSelect(selectCollection[index]))
+}
+
+// Initialize MDCSlider
+const slidersCollection = document.querySelector('.mdc-slider')
+const sliders = []
+for (let index = 0; index < slidersCollection.length; index += 1) {
+  sliders.push(new MDCSlider(slidersCollection[index]))
 }
