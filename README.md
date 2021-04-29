@@ -17,7 +17,7 @@
 - footers,
 - header contains desktop and **mobile navigation** supported with **Headroom.js** feature.
 
-> Sample template contain**Accordion Module**feature fully compatible witch other Material components.
+> Sample template contains **Accordion Module** feature fully compatible witch other Material components.
 
 #### Working **DEMO** available at [mdpack.vajracode.net](https://mdpack.vajracode.net/)
 
