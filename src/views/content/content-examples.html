@@ -1200,22 +1200,16 @@
             class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth"
           >
             <ul class="mdc-list mdc-list--dense">
-              <li class="mdc-list-item" data-value="">
-                <span class="mdc-list-item__ripple"></span>
-              </li>
-              <li class="mdc-list-item" data-value="grains">
+              <li class="mdc-list-item" data-value="option-first">
                 <span class="mdc-list-item__ripple"></span>
                 <span class="mdc-list-item__text">Option 1</span>
               </li>
-              <li
-                class="mdc-list-item mdc-list-item--selected"
-                data-value="vegetables"
-                aria-selected="true"
-              >
+              <li class="mdc-list-item" data-value="option-second">
+                <!-- aria-selected="true" & class="mdc-list-item--selected" IF initially selected-->
                 <span class="mdc-list-item__ripple"></span>
                 <span class="mdc-list-item__text">Option 2</span>
               </li>
-              <li class="mdc-list-item" data-value="fruit">
+              <li class="mdc-list-item" data-value="option-three">
                 <span class="mdc-list-item__ripple"></span>
                 <span class="mdc-list-item__text">Option 3</span>
               </li>
@@ -1559,6 +1553,51 @@
                 </td>
               </tr>
             </table>
+          </div>
+        </div>
+        <h2>Sliders</h2>
+        <div class="component-wrapper">
+          <div class="mdc-slider mdc-slider--tick-marks">
+            <input
+              class="mdc-slider__input"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              name="volume"
+              step="10"
+              aria-label="Discrete slider with tick marks demo"
+            />
+            <div class="mdc-slider__track">
+              <div class="mdc-slider__track--inactive"></div>
+              <div class="mdc-slider__track--active">
+                <div class="mdc-slider__track--active_fill"></div>
+              </div>
+              <div class="mdc-slider__tick-marks">
+                <div class="mdc-slider__tick-mark--active"></div>
+                <div class="mdc-slider__tick-mark--active"></div>
+                <div class="mdc-slider__tick-mark--active"></div>
+                <div class="mdc-slider__tick-mark--active"></div>
+                <div class="mdc-slider__tick-mark--active"></div>
+                <div class="mdc-slider__tick-mark--active"></div>
+                <div class="mdc-slider__tick-mark--inactive"></div>
+                <div class="mdc-slider__tick-mark--inactive"></div>
+                <div class="mdc-slider__tick-mark--inactive"></div>
+                <div class="mdc-slider__tick-mark--inactive"></div>
+                <div class="mdc-slider__tick-mark--inactive"></div>
+              </div>
+            </div>
+            <div class="mdc-slider__thumb">
+              <div
+                class="mdc-slider__value-indicator-container"
+                aria-hidden="true"
+              >
+                <div class="mdc-slider__value-indicator">
+                  <span class="mdc-slider__value-indicator-text"> 50 </span>
+                </div>
+              </div>
+              <div class="mdc-slider__thumb-knob"></div>
+            </div>
           </div>
         </div>
       </div>
