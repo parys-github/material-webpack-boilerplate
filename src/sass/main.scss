@@ -13,20 +13,21 @@
 @use "@material/list";
 @use "@material/menu-surface/mdc-menu-surface";
 @use "@material/menu/mdc-menu";
-@use "@material/select/styles" as select;
 @use "@material/dialog";
 @use "@material/floating-label/mdc-floating-label";
 @use "@material/line-ripple/mdc-line-ripple";
 @use "@material/notched-outline/mdc-notched-outline";
 @use "@material/checkbox";
-@use "@material/radio/styles";
+@use "@material/radio/styles" as radio;
 @use "@material/form-field";
-@use "@material/textfield";
+@use "@material/select/styles" as select;
+@use "@material/slider/styles" as slider;
 @use "@material/switch";
 @use "@material/tab-bar/mdc-tab-bar";
 @use "@material/tab-scroller/mdc-tab-scroller";
 @use "@material/tab-indicator/mdc-tab-indicator";
 @use "@material/tab/mdc-tab";
+@use "@material/textfield";
 @use "@material/tooltip/styles" as tooltip;
 
 @include card.core-styles;
