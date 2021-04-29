@@ -66,6 +66,23 @@ body {
       width: 100%;
     }
   }
+  /* Sliders Custom */
+  .mdc-slider {
+    .mdc-slider__track,
+    .mdc-slider__track--active,
+    .mdc-slider__track--inactive {
+      height: 4px;
+      margin-top: 1px;
+    }
+    .mdc-slider__track--active_fill {
+      border-width: 4px;
+    }
+    .mdc-slider__tick-mark--active,
+    .mdc-slider__tick-mark--inactive {
+      height: 8px;
+      width: 8px;
+    }
+  }
 }
 .hero {
   position: relative;
