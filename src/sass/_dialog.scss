@@ -1,18 +1,11 @@
 body {
   .mdc-dialog {
     z-index: 11;
-    .mdc-dialog__content.pure-video {
-      padding: 0;
-    }
     &.yt-720 {
       .mdc-dialog__surface {
         width: 720px;
-        height: 405px;
-        overflow: hidden;
+        height: 442px;
         max-width: 100%;
-      }
-      .close-tr {
-        top: -210px;
       }
     }
     .mdc-dialog__scrim {
@@ -29,33 +22,39 @@ body {
         padding-bottom: 0;
       }
     }
-  }
-  .mdc-dialog__content {
-    &.pure-video {
-      padding: 0;
+    &.video-dialog {
+      .mdc-dialog__surface {
+        background-color: black;
+        border-radius: 6px;
+        .mdc-dialog__content {
+          overflow: hidden;
+          padding: 0;
+          .mdc-dialog__actions {
+            background-color: black;
+            padding: 0;
+            min-height: 34px;
+            .mdc-button.close {
+              padding: 0;
+              min-width: 36px;
+              i {
+                transition: $default-transition;
+                background-color: $color-primary;
+                border-radius: 50%;
+                color: #fff;
+              }
+              &:hover i {
+                background-color: $color-secondary;
+              }
+            }
+          }
+        }
+      }
     }
-  }
-  .close-tr {
-    position: relative;
-    z-index: 9;
-    width: 37px;
-    height: 37px;
-    overflow: hidden;
-    background-color: #fff;
-    left: calc(100% - 16px);
-    top: -160px;
-    border-radius: 50%;
-    &:hover {
-      opacity: 0;
+    &.pure-html {
+      overflow: hidden;
+      .content-block {
+        overflow: scroll;
+      }
     }
-    i {
-      position: absolute;
-      left: 0;
-      top: 0;
-      font-size: 37px;
-    }
-  }
-  .pure-video {
-    margin-bottom: -7px;
   }
 }
