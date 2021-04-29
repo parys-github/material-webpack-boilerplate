@@ -1013,7 +1013,7 @@
 </section>
 <!-- 2nd Dialog Box -->
 <section>
-  <div class="mdc-dialog video-dialog" id="dialogExample">
+  <div class="mdc-dialog video-dialog" id="dialogVideoExample">
     <div class="mdc-dialog__container">
       <div
         class="mdc-dialog__surface"
@@ -1022,7 +1022,16 @@
         aria-labelledby="my-dialog-title"
         aria-describedby="my-dialog-content"
       >
-        <div class="mdc-dialog__content pure-video" id="my-dialog-content">
+        <div class="mdc-dialog__content" id="my-video-content">
+          <div class="mdc-dialog__actions">
+            <button
+              type="button"
+              class="mdc-button close"
+              data-mdc-dialog-action="close"
+            >
+              <i class="material-icons">close</i>
+            </button>
+          </div>
           <iframe
             width="560"
             height="315"
@@ -1032,6 +1041,41 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>
+</section>
+<!-- ./2nd Dialog -->
+<!-- 3th Dialog Html Example -->
+<section>
+  <div class="mdc-dialog" id="dialogHtmlExample">
+    <div class="mdc-dialog__container">
+      <div
+        class="mdc-dialog__surface"
+        role="alertdialog"
+        aria-modal="true"
+        aria-labelledby="my-dialog-title"
+        aria-describedby="my-dialog-content"
+      >
+        <div class="mdc-dialog__content pure-html" id="my-html-content">
+          <div class="content-block">
+            <h5>Medicine - Everyday Therapy</h5>
+            <div class="img-fluid medicine-overflow">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0069/0837/9251/products/wear-medicine-top-RS18-TSD408_99X_F1_1440x.jpg?v=1534228815"
+                alt="Meditation"
+                style="margin-top: -90px"
+                class="img-center"
+              />
+            </div>
+            <p>
+              Premium quality t-shirts and tops designed by European artists,
+              illustrators and tattoo masters.
+            </p>
+            <p>Get your dose today! https://wearmedicine.com.au</p>
+          </div>
         </div>
         <div class="mdc-dialog__actions">
           <button
@@ -1048,25 +1092,10 @@
     <div class="mdc-dialog__scrim"></div>
   </div>
 </section>
-<!-- ./2nd Dialog -->
-
+<!-- ./3th Dialog Html Example -->
 <section class="content">
   <div class="mdc-dialog yt-720 video-dialog" id="dialogCapitol">
     <div class="mdc-dialog__container">
-      <div class="close-tr">
-        <button
-          type="button"
-          class="mdc-button mdc-dialog__button"
-          data-mdc-dialog-action="close"
-        >
-          <i
-            class="material-icons action-icon"
-            role="button"
-            title="More options"
-            >cancel</i
-          >
-        </button>
-      </div>
       <div
         class="mdc-dialog__surface"
         role="alertdialog"
@@ -1074,7 +1103,16 @@
         aria-labelledby="my-dialog-title"
         aria-describedby="my-dialog-content"
       >
-        <div class="mdc-dialog__content pure-video" id="my-dialog-content">
+        <div class="mdc-dialog__content" id="my-dialog-content">
+          <div class="mdc-dialog__actions">
+            <button
+              type="button"
+              class="mdc-button close"
+              data-mdc-dialog-action="close"
+            >
+              <i class="material-icons">close</i>
+            </button>
+          </div>
           <iframe
             width="720"
             height="405"
@@ -1635,7 +1673,7 @@
         <button
           type="button"
           class="mdc-button mdc-button--raised rounded js-open-dialog"
-          data-dialog="dialogExample"
+          data-dialog="dialogVideoExample"
         >
           <span class="mdc-button__ripple"></span>
           <span class="mdc-button__label">Play Video</span>
@@ -1651,7 +1689,7 @@
         <button
           type="button"
           class="mdc-button mdc-button--raised rounded js-open-dialog"
-          data-dialog="dialogExample2"
+          data-dialog="dialogHtmlExample"
         >
           <span class="mdc-button__ripple"></span>
           <span class="mdc-button__label">Open html</span>
