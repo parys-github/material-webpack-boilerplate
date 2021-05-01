@@ -12,6 +12,7 @@ import { MDCRadio } from '@material/radio'
 import Accordion from 'accordion/src/accordion.mjs'
 import { MDCDialog } from '@material/dialog'
 import { MDCSlider } from '@material/slider'
+import Swiper from 'swiper/bundle'
 
 require('./main')
 
@@ -151,4 +152,27 @@ const slidersCollection = document.querySelector('.mdc-slider')
 const sliders = []
 for (let index = 0; index < slidersCollection.length; index += 1) {
   sliders.push(new MDCSlider(slidersCollection[index]))
+}
+
+// Initialize Swiper Sliders
+const swipersCollection = document.querySelectorAll('.swiper-container')
+window.swipers = []
+for (let index = 0; index < swipersCollection.length; index += 1) {
+  window.swipers.push(
+    new Swiper(swipersCollection[index], {
+      slidesPerView: 6,
+      spaceBetween: 20,
+      slidesPerGroup: 6,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    })
+  )
 }
