@@ -17,7 +17,7 @@
 - footers,
 - header contains desktop and **mobile navigation** supported with **Headroom.js** feature.
 
-> Sample template contains **Accordion Module** feature fully compatible witch other Material components.
+> Sample template contains **Accordion Module** & **Swiper Module** - features fully compatible witch other Material components.
 
 #### Working **DEMO** available at [mdpack.vajracode.net](https://mdpack.vajracode.net/)
 
@@ -108,6 +108,7 @@ cd dist && http-server
 ### Additional modules
 
 - [`Accordion`](https://www.npmjs.com/package/accordion) - Silky-smooth accordion widget
+- [`Swiper`](https://swiperjs.com/) - Most modern mobile touch slider
 - [`Headroom.js`](https://www.npmjs.com/package/headroom.js) - Lightweight, high-performance JS widget
 
 ### Linters
