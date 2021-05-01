@@ -66,6 +66,28 @@
 @media only screen and (min-width: 1600px) {
   /* desktop-largest */
 }
+/* Full-width sliders */
+@media (min-width: 1202px) and (max-width: 1599px) {
+  body {
+    .swiper-container {
+      max-width: calc(97vw - 12px);
+    }
+  }
+}
+@media (min-width: 992px) and (max-width: 1201px) {
+  body {
+    .swiper-container {
+      max-width: calc(96vw - 12px);
+    }
+  }
+}
+@media (min-width: 840px) and (max-width: 991px) {
+  body {
+    .swiper-container {
+      max-width: calc(95vw - 6px);
+    }
+  }
+}
 @media only screen and (max-width: 1599px) {
   .main {
     .info {
@@ -101,6 +123,14 @@
   }
 }
 @media only screen and (max-width: 839px) {
+  body {
+    .swiper-container {
+      max-width: 94vw;
+    }
+    .swiper-pagination-bullet {
+      width: 4%;
+    }
+  }
   header {
     &.headroom--pinned,
     &.headroom--unpinned {
@@ -237,6 +267,14 @@
   }
 }
 @media only screen and (max-width: 599px) {
+  body {
+    .swiper-container {
+      max-width: 90vw;
+    }
+    .swiper-pagination-bullet {
+      width: 3%;
+    }
+  }
   .home {
     .card {
       .action-icons .action-icon {
