@@ -99,6 +99,12 @@
     background-image: url('./../img/icons/icon-prettier.svg');
     background-size: 36px 32px;
   }
+  &.ico-swiper {
+    background-image: url('./../img/icons/icon-swiper.svg');
+    background-size: 28px 28px;
+    width: 28px;
+    height: 28px;
+  }
 }
 .action-icon {
   &:hover .icon-social {
