@@ -160,14 +160,41 @@ window.swipers = []
 for (let index = 0; index < swipersCollection.length; index += 1) {
   window.swipers.push(
     new Swiper(swipersCollection[index], {
-      slidesPerView: 6,
-      spaceBetween: 20,
-      slidesPerGroup: 6,
+      speed: 800,
       loop: true,
       loopFillGroupWithBlank: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
+      },
+      breakpoints: {
+        // when window width is >= 599px
+        599: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+          slidesPerGroup: 2,
+        },
+        839: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+          slidesPerGroup: 3,
+        },
+        991: {
+          slidesPerView: 4,
+          spaceBetween: 24,
+          slidesPerGroup: 4,
+        },
+        1199: {
+          slidesPerView: 5,
+          spaceBetween: 24,
+          slidesPerGroup: 5,
+        },
+        // when window width is >= 1599px WIEDE SCREENS
+        1599: {
+          slidesPerView: 6,
+          spaceBetween: 24,
+          slidesPerGroup: 6,
+        },
       },
       navigation: {
         nextEl: '.swiper-button-next',
