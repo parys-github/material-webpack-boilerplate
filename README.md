@@ -2,16 +2,17 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-![Screenshot](https://mdpack.vajracode.net/screenshot.jpg "Screenshot")
+![Screenshot](https://mdpack.vajracode.net/screenshot.jpg 'Screenshot')
 
 > Webpack 5 with Material UI Components Boilerplate. Compilation contains basic Material template. Package is using Babel, PostCSS and Sass with a hot dev server. The project is fully configured and ready to generate the final production process.
 
 > Beside of that boilerplate basic template has implemented bunch of useful features like:
+
 - custom font,
 - custom icons,
 - scroll to top,
 - partials templates contains independent contents
-> Global partial modules like:
+  > Global partial modules like:
 - analytics (soon)
 - hero section (soon),
 - footers,
@@ -24,10 +25,13 @@
 ## Installation
 
 Clone this repo and npm install.
+
 ```bash
 git clone https://github.com/parys-github/material-webpack-boilerplate.git
 ```
+
 Instal required **NPM** modules
+
 ```bash
 npm i
 ```
@@ -59,6 +63,7 @@ You can view the deploy by creating a server in `dist`.
 ```bash
 cd dist && http-server
 ```
+
 ### Basic Knowledge Base
 
 - [`How to setup Webpack 5 - from Scratch`](https://abhimanyuchauhan-61309.medium.com/webpack-5-9256d45f7b83)
