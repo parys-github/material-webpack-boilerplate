@@ -23,7 +23,7 @@
     "no-new-wrappers": 1,
     "no-nested-ternary": 1,
     "no-console": 1,
-	"no-unused-vars": 1,
+    "no-unused-vars": 1,
     "no-template-curly-in-string": 1,
     "no-self-compare": 1,
     "import/prefer-default-export": 0,
