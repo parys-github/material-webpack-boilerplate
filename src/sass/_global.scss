@@ -445,6 +445,20 @@ Custom position only for default mdc-icon-button element
     }
   }
 }
+.menus-collection {
+  margin: 0 -5px;
+  .item-block {
+    margin: 0 5px 12px;
+  }
+}
+.buttons-collection {
+  .inline-list {
+    margin: 0 -5px;
+    .mdc-button {
+      margin: 0 5px 12px;
+    }
+  }
+}
 #iLikeThis:before {
   content: attr(aria-label);
   display: block;
