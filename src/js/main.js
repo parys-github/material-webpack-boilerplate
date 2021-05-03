@@ -1,6 +1,7 @@
 // Test import of styles
 import '@/sass/main.scss'
 import { MDCRipple } from '@material/ripple'
+import { MDCIconButtonToggle } from '@material/icon-button'
 import Headroom from 'headroom.js'
 // Headroom setup
 const header = document.querySelector('header')
@@ -17,11 +18,16 @@ window.addEventListener('load', () => {
 
 const ripples = []
 ripples.map.call(
-  document.querySelectorAll(
-    '.mdc-button, .mdc-icon-button, .mdc-card__primary-action'
-  ),
+  document.querySelectorAll('.mdc-button, .mdc-card__primary-action'),
   (el) => new MDCRipple(el)
 )
+// Initialize MDCIconButtonToggle
+const icobtntoggleCollection = document.querySelectorAll('.mdc-icon-button')
+const icobtntoggle = []
+for (let index = 0; index < icobtntoggleCollection.length; index += 1) {
+  icobtntoggle.push(new MDCIconButtonToggle(icobtntoggleCollection[index]))
+}
+
 // Go to top button event listener
 const topbutton = document.querySelector('#topBtn')
 window.addEventListener('scroll', () => {

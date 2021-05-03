@@ -101,6 +101,20 @@ body {
       width: 8px;
     }
   }
+  .inline-list {
+    list-style: none;
+    padding: 0;
+    li {
+      display: inline-flex;
+      vertical-align: middle;
+    }
+  }
+  .push-left {
+    float: left !important;
+  }
+  .push-right {
+    float: right !important;
+  }
 }
 .hero {
   position: relative;
@@ -385,6 +399,13 @@ Custom position only for default mdc-icon-button element
   background-color: #fff;
   padding: 4px;
   border-radius: 4px;
+  .mdc-icon-button {
+    box-shadow: 0 0 0 2px $color-primary;
+    &:before,
+    &:after {
+      border-radius: 0;
+    }
+  }
   td {
     padding: 4px;
     code {
@@ -424,6 +445,59 @@ Custom position only for default mdc-icon-button element
     }
   }
 }
+#iLikeThis:before {
+  content: attr(aria-label);
+  display: block;
+  transition: $anima-beizer;
+  opacity: 0;
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 30;
+  pointer-events: none;
+  padding: 6px 10px 8px;
+  line-height: normal;
+  white-space: nowrap;
+  text-decoration: none;
+  text-indent: 0;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: normal;
+  color: #fff;
+  background-color: $color-secondary;
+  border-radius: 2px;
+  width: auto !important;
+  border-radius: 4px;
+}
+#iLikeThis:hover:before {
+  top: -24px;
+  opacity: 1;
+}
+#iLikeThis:after {
+  content: '';
+  transform: translate(-50%, 0);
+  background-color: #0000;
+  z-index: 29;
+  top: 20px;
+  left: 50%;
+  transition: $anima-beizer;
+  display: block;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  border-radius: 0;
+  border-left: 10px solid #0000;
+  border-right: 10px solid #0000;
+  border-top: 10px solid $color-secondary;
+}
+#iLikeThis:hover:after {
+  top: 4px;
+  opacity: 1;
+}
+#iLikeThis.mdc-ripple-upgraded--foreground-activation:after {
+  animation: none;
+}
 .mdc-tooltip {
   .mdc-tooltip__surface {
     font-weight: 500;
@@ -432,34 +506,34 @@ Custom position only for default mdc-icon-button element
     display: inline-table;
     min-width: 100%;
     &.tt--tl {
-      margin-top: -53px;
+      margin-top: -71px;
       transform: translate(50%, -50%);
-      margin-left: -40px;
+      margin-left: -48px;
     }
     &.tt--tr {
-      margin-top: -53px;
+      margin-top: -71px;
       transform: translate(0, -50%);
-      margin-left: calc(-50% + 20px);
+      margin-left: calc(-50% + 25px);
       text-align: right;
     }
     &.tt--tc {
-      margin-top: -53px;
+      margin-top: -71px;
       transform: translate(0, -50%);
     }
     &.tt--ml {
-      margin-top: -20px;
+      margin-top: -28px;
       transform: translate(50%, -50%);
-      margin-left: calc(-100% - 24px);
+      margin-left: calc(-100% - 28px);
     }
     &.tt--mr {
-      margin-top: -20px;
+      margin-top: -28px;
       transform: translate(0, -50%);
-      margin-left: calc(50% + 24px);
+      margin-left: calc(50% + 28px);
     }
     &.tt--br {
       margin-top: 15px;
       transform: translate(0, -50%);
-      margin-left: calc(-50% + 20px);
+      margin-left: calc(-50% + 25px);
       text-align: right;
       i.icon--left {
         margin-right: -10px;
@@ -468,7 +542,7 @@ Custom position only for default mdc-icon-button element
     &.tt--bl {
       margin-top: 15px;
       transform: translate(50%, -50%);
-      margin-left: -40px;
+      margin-left: -48px;
     }
     i {
       position: relative;

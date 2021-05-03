@@ -7,6 +7,7 @@
 /* Material design */
 @use "@material/layout-grid/mdc-layout-grid";
 @use "@material/button/mdc-button";
+@use "@material/icon-button";
 @use "@material/elevation/mdc-elevation";
 @use "@material/card";
 @use "@material/drawer";
@@ -40,6 +41,7 @@
 @include checkbox.core-styles;
 @include form-field.core-styles;
 @include switch.core-styles;
+@include icon-button.core-styles;
 
 /* Custom styles */
 @import 'swiper/swiper-bundle.css';

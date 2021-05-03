@@ -15,12 +15,6 @@
   .card {
     border-radius: 4px;
     background-color: white;
-    .float-left {
-      float: left !important;
-    }
-    .float-right {
-      float: right !important;
-    }
     img {
       height: auto;
       width: 100%;
@@ -368,10 +362,10 @@
     overflow: hidden;
     width: 188px;
   }
-  .float-left {
+  .push-left {
     float: left !important;
   }
-  .float-right {
+  .push-right {
     float: right !important;
   }
   .icon-color--yellow {
