@@ -89,6 +89,28 @@ for (let index = 0; index < dialogsCollection.length; index += 1) {
   dialogs.push(new MDCDialog(dialogsCollection[index]))
 }
 
+for (let index = 0; index < dialogs.length; index += 1) {
+  // Listening for each dialog closing
+  dialogs[index].listen('MDCDialog:closing', (event) => {
+    // If there is a video tag in dialog, just pause it
+    const video = event.target.querySelector('video')
+    if (video) {
+      video.pause()
+    }
+
+    // If there is an iframe tag in dialog…
+    const iframe = event.target.querySelector('iframe')
+    if (iframe) {
+      // … stash src attribute value
+      const src = iframe.getAttribute('src')
+      // remove it
+      iframe.setAttribute('src', '')
+      // and bring back
+      iframe.setAttribute('src', src)
+    }
+  })
+}
+
 // Listener callback for dialog openers
 const dialogOpenerListener = (e) => {
   //   It runs through all dialogs,

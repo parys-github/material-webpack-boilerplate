@@ -237,6 +237,16 @@
     text-align: center;
   }
   .mdc-dialog {
+    .mdc-dialog__container {
+      max-width: calc(100% - 2em);
+      .mdc-dialog__surface {
+        iframe,
+        video {
+          max-width: 100%;
+          min-height: 294px;
+        }
+      }
+    }
     &.yt-720 {
       .mdc-dialog__container {
         .mdc-dialog__surface {

@@ -1003,7 +1003,6 @@
           </div>
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
             <!-- Radio group list -->
-            <!-- Radio Group List  -->
             <ul class="mdc-list default" role="radiogroup">
               <li class="mdc-list-item" role="radio" aria-checked="false">
                 <span class="mdc-list-item__ripple"></span>
@@ -1080,9 +1079,89 @@
     </div>
   </div>
 </section>
-<!-- 2nd Dialog Box -->
+<!-- 2nd Dialog Box with mp4 -->
 <section>
-  <div class="mdc-dialog video-dialog" id="dialogVideoExample">
+  <div class="mdc-dialog video-dialog" id="dialogVideoMp4">
+    <div class="mdc-dialog__container">
+      <div
+        class="mdc-dialog__surface"
+        role="alertdialog"
+        aria-modal="true"
+        aria-labelledby="my-dialog-title"
+        aria-describedby="my-dialog-content"
+      >
+        <div class="mdc-dialog__content" id="my-video-content">
+          <div class="mdc-dialog__actions">
+            <button
+              type="button"
+              class="mdc-button close"
+              data-mdc-dialog-action="close"
+            >
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <video
+            width="640"
+            height="360"
+            controls=""
+            preload="auto"
+            poster="./../../img/out-of-the-shadow.jpg"
+          >
+            <source
+              src="https://lostvideo.s3-ap-southeast-2.amazonaws.com/OUT-OF-SHADOWS-OFFICIAL.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="https://lostvideo.s3-ap-southeast-2.amazonaws.com/OUT-OF-SHADOWS-OFFICIAL.mp4"
+              type="video/webm"
+            />
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>
+</section>
+<!-- ./2nd Dialog -->
+<!-- 3rd Dialog Box with Vimeo -->
+<section>
+  <div class="mdc-dialog video-dialog" id="dialogVideoVimeo">
+    <div class="mdc-dialog__container">
+      <div
+        class="mdc-dialog__surface"
+        role="alertdialog"
+        aria-modal="true"
+        aria-labelledby="my-dialog-title"
+        aria-describedby="my-dialog-content"
+      >
+        <div class="mdc-dialog__content" id="my-video-content">
+          <div class="mdc-dialog__actions">
+            <button
+              type="button"
+              class="mdc-button close"
+              data-mdc-dialog-action="close"
+            >
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <iframe
+            src="https://player.vimeo.com/video/1084537"
+            width="640"
+            height="360"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>
+</section>
+<!-- ./3rd Dialog -->
+<!-- 4th Dialog Box with mp4 -->
+<section>
+  <div class="mdc-dialog video-dialog" id="dialogVideoYoutube">
     <div class="mdc-dialog__container">
       <div
         class="mdc-dialog__surface"
@@ -1104,7 +1183,7 @@
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/yqWX86uT5jM"
+            src="https://www.youtube.com/embed/0RP_dRF53pc"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -1116,8 +1195,8 @@
     <div class="mdc-dialog__scrim"></div>
   </div>
 </section>
-<!-- ./2nd Dialog -->
-<!-- 3th Dialog Html Example -->
+<!-- ./4th Dialog -->
+<!-- 5th Dialog Html Example -->
 <section>
   <div class="mdc-dialog" id="dialogHtmlExample">
     <div class="mdc-dialog__container">
@@ -1739,13 +1818,48 @@
           >.
         </p>
         <h5>Dialog with embedded video</h5>
+        <!-- Video mp4 trigger -->
         <button
           type="button"
-          class="mdc-button mdc-button--raised rounded js-open-dialog"
-          data-dialog="dialogVideoExample"
+          class="mdc-button mdc-button--raised rounded js-open-dialog mb-1"
+          data-dialog="dialogVideoMp4"
         >
           <span class="mdc-button__ripple"></span>
-          <span class="mdc-button__label">Play Video</span>
+          <span class="mdc-button__label">Video mp4</span>
+          <i
+            class="material-icons mdc-button__icon"
+            role="button"
+            title="Play Video"
+          >
+            ondemand_video</i
+          >
+        </button>
+        <span class="v-spacer"></span>
+        <!-- Video VIMEO trigger -->
+        <button
+          type="button"
+          class="mdc-button mdc-button--raised rounded js-open-dialog mb-1"
+          data-dialog="dialogVideoVimeo"
+        >
+          <span class="mdc-button__ripple"></span>
+          <span class="mdc-button__label">With Vimeo</span>
+          <i
+            class="material-icons mdc-button__icon"
+            role="button"
+            title="Play Video"
+          >
+            videocam</i
+          >
+        </button>
+        <span class="v-spacer"></span>
+        <!-- Video Youtube trigger -->
+        <button
+          type="button"
+          class="mdc-button mdc-button--raised rounded js-open-dialog mb-1"
+          data-dialog="dialogVideoYoutube"
+        >
+          <span class="mdc-button__ripple"></span>
+          <span class="mdc-button__label">Video Youtube</span>
           <i
             class="material-icons mdc-button__icon"
             role="button"
@@ -1757,7 +1871,7 @@
         <span class="v-spacer"></span>
         <button
           type="button"
-          class="mdc-button mdc-button--raised rounded js-open-dialog"
+          class="mdc-button mdc-button--raised rounded js-open-dialog mb-1"
           data-dialog="dialogHtmlExample"
         >
           <span class="mdc-button__ripple"></span>

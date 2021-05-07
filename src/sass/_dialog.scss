@@ -26,6 +26,7 @@ body {
       .mdc-dialog__surface {
         background-color: black;
         border-radius: 6px;
+        max-width: 100%;
         .mdc-dialog__content {
           overflow: hidden;
           padding: 0;
