@@ -123,6 +123,9 @@
   }
 }
 @media only screen and (max-width: 839px) {
+  html {
+    -webkit-overflow-scrolling: touch;
+  }
   body {
     .swiper-container {
       max-width: 94vw;
@@ -186,6 +189,9 @@
         }
         .gh.mdc-list-item__graphic {
           display: inline-flex;
+          position: relative;
+          top: 2px;
+          margin-right: 15px;
         }
       }
     }
@@ -231,6 +237,7 @@
   body.examples {
     h1 {
       padding: 0 0.25em;
+      margin-left: 0.1em;
     }
   }
   .center-tablet {

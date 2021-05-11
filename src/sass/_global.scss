@@ -17,6 +17,11 @@ body {
     &:hover {
       color: $color-primary;
     }
+    &.npm-version {
+      &:hover {
+        filter: invert(1);
+      }
+    }
   }
   .mdc-button {
     transition: $default-transition;
