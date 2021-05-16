@@ -113,8 +113,9 @@ cd dist && http-server
 ### Additional modules
 
 - [`Accordion`](https://www.npmjs.com/package/accordion) - Silky-smooth accordion widget
-- [`Swiperjs`](https://swiperjs.com/) - Most modern mobile touch slider
+- [`Audio.js`](https://kolber.github.io/audiojs/) - Modern Audio Player widget
 - [`Headroom.js`](https://www.npmjs.com/package/headroom.js) - Lightweight, high-performance JS widget
+- [`Swiperjs`](https://swiperjs.com/) - Most modern mobile touch slider
 
 ### Linters
 
