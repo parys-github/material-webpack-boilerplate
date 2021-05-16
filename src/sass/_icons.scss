@@ -99,9 +99,13 @@
     background-image: url('./../img/icons/icon-prettier.svg');
     background-size: 36px 32px;
   }
+  &.ico-music {
+    background-image: url('./../img/icons/icon-music.svg');
+    background-size: 28px auto;
+  }
   &.ico-swiper {
     background-image: url('./../img/icons/icon-swiper.svg');
-    background-size: 28px 28px;
+    background-size: 28px auto;
     width: 28px;
     height: 28px;
   }

@@ -391,6 +391,43 @@
       padding-right: 0 !important;
     }
   }
+  .aplayer {
+    padding-bottom: 4em;
+    .audio-container {
+      padding-left: 0;
+      .pcast-player-controls {
+        justify-content: space-around;
+        button {
+          margin: 0 2px;
+        }
+        .pcast-time {
+          font-size: 2em;
+          position: absolute;
+          top: 2.3em;
+          left: 50%;
+          transform: translate(-50%, 0);
+          &.pcast-currenttime {
+            padding-right: 3.4em;
+            text-align: right;
+          }
+          &.pcast-duration {
+            padding-left: 3.4em;
+            text-align: left;
+          }
+        }
+        .pcast-duration.pcast-time {
+          margin-right: 5px;
+        }
+        .progress-control {
+          display: block;
+          position: absolute;
+          top: 7.4em;
+          width: calc(100% - 3em);
+          left: 1em;
+        }
+      }
+    }
+  }
 }
 @media (min-width: 600px) and (max-width: 839px) {
   /**/

@@ -120,6 +120,9 @@ body {
   .push-right {
     float: right !important;
   }
+  .global-radius {
+    border-radius: $global-radius;
+  }
 }
 .hero {
   position: relative;
@@ -466,6 +469,11 @@ Custom position only for default mdc-icon-button element
       margin: 0 5px 12px;
     }
   }
+}
+.aplayer {
+  padding: 0.8em 0.3em 0.3em;
+  background-color: #ffffff;
+  margin-top: 1.5em;
 }
 #iLikeThis:before {
   content: attr(aria-label);

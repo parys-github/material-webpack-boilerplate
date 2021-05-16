@@ -1,0 +1,282 @@
+/* Pcast Player */
+.audio-container {
+  margin-top: 1em;
+  padding-left: 4px;
+  .pcast-player {
+    .pcast-player-controls {
+      position: relative;
+      box-sizing: border-box;
+      color: #000;
+      font-size: 14px;
+      padding: 5px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 10px 0px 20px;
+      .pcast-play-pause:before,
+      .pcast-rewind:before,
+      .pcast-mute:before,
+      .pcast-speed:before {
+        content: attr(aria-label);
+        display: block;
+        transition: $anima-beizer;
+        opacity: 0;
+        position: absolute;
+        top: -24px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 30;
+        pointer-events: none;
+        padding: 6px 10px 8px;
+        text-indent: 0;
+        line-height: 14px;
+        font-size: 14px;
+        font-weight: normal;
+        color: #fff;
+        white-space: nowrap;
+        text-decoration: none;
+        overflow: hidden;
+        background-color: $color-primary;
+        border-radius: 2px;
+        width: auto !important;
+        border-radius: 4px;
+      }
+      .pcast-play-pause:hover:before,
+      .pcast-rewind:hover:before,
+      .pcast-mute:hover:before,
+      .pcast-speed:hover:before {
+        top: -30px;
+        opacity: 1;
+      }
+      .pcast-play-pause:after,
+      .pcast-rewind:after,
+      .pcast-mute:after,
+      .pcast-speed:after {
+        content: '';
+        transform: translate(-50%, 0);
+        background-color: #0000;
+        z-index: 129;
+        top: 4px;
+        left: 50%;
+        transition: $anima-beizer;
+        display: block;
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+        border-radius: 0;
+        border-left: 8px solid #0000;
+        border-right: 8px solid #0000;
+        border-top: 8px solid $color-primary;
+      }
+      .pcast-play-pause:hover:after,
+      .pcast-rewind:hover:after,
+      .pcast-mute:hover:after,
+      .pcast-speed:hover:after {
+        top: -2px;
+        opacity: 1;
+      }
+      .pcast-play-pause.mdc-ripple-upgraded--foreground-activation:after,
+      .pcast-rewind.mdc-ripple-upgraded--foreground-activation:after,
+      .pcast-mute.mdc-ripple-upgraded--foreground-activation:after,
+      .pcast-speed.mdc-ripple-upgraded--foreground-activation:after {
+        animation: none;
+      }
+    }
+    button {
+      margin: 0 4px;
+      border: none;
+      background-color: $color-bg;
+      border-radius: 50%;
+      &.mdc-ripple-upgraded:hover {
+        pointer-events: visible;
+        cursor: pointer;
+        background-color: rgba(198, 198, 198, 0.4);
+      }
+    }
+    .pcast-time {
+      display: inline-block;
+      font-size: 0.8rem;
+      text-align: center;
+      font-weight: 400;
+      color: $color-text;
+    }
+    .pcast-speed {
+      font-weight: 600;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      flex: 0 0 auto;
+      color: $color-text;
+    }
+    .pcast-rewind {
+      img {
+        width: 25px;
+      }
+    }
+
+    .pcast-download {
+      font-size: 12px;
+      margin-top: 0.5em;
+      display: inline-block;
+      color: black;
+      &:hover,
+      &:focus {
+        color: #666;
+      }
+    }
+    .pcast-currenttime {
+      text-align: left;
+      min-width: 40px;
+      margin-left: 5px;
+    }
+    .pcast-duration {
+      min-width: 40px;
+      text-align: right;
+    }
+    .material-icons {
+      color: $color-text;
+      &.mdc-icon-button__icon--on {
+        color: $color-primary;
+      }
+    }
+    .progress-control {
+      display: inline-flex;
+      width: 100%;
+    }
+  }
+}
+
+/* Custom Audio Player - Draggable Rang Slider */
+// excess height to improve interactive area / accessibility
+$height: 18px;
+$thumb-height: 13px;
+$track-height: 4px;
+
+// colours
+$upper-color: $color-footer;
+$lower-color: $color-primary;
+$thumb-color: $color-primary;
+$thumb-hover-color: $color-link;
+
+$upper-background: linear-gradient(to bottom, $upper-color, $upper-color) 100%
+  50% / 100% $track-height no-repeat transparent;
+$lower-background: linear-gradient(to bottom, $lower-color, $lower-color) 100%
+  50% / 100% $track-height no-repeat transparent;
+
+// Webkit cannot style progress so we fake it with a long shadow
+// on the thumb element
+@function webkit-slider-thumb-shadow($i: 1) {
+  $val: #{$i}px 0 0 -#{($thumb-height - $track-height) / 2} #{$upper-color};
+  @if $i == 1 {
+    @for $k from 2 through 1000 {
+      $val: #{$val}, webkit-slider-thumb-shadow($k);
+    }
+  }
+  @return $val;
+}
+
+.pcast-progress {
+  position: relative;
+  margin: 1px 10px 0 8px;
+  display: block;
+  appearance: none;
+  width: 100%;
+  height: $height;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+}
+
+// Webkit
+.pcast-progress::-webkit-slider-runnable-track {
+  width: 100%;
+  height: $height;
+  background: $lower-background;
+}
+
+.pcast-progress::-webkit-slider-thumb {
+  position: relative;
+  appearance: none;
+  height: $thumb-height;
+  width: $thumb-height;
+  background: $thumb-color;
+  border-radius: 100%;
+  border: 0;
+  top: 50%;
+  margin-top: (-$thumb-height/2);
+  box-shadow: webkit-slider-thumb-shadow();
+  transition: background-color 150ms;
+}
+
+// Firefox
+.pcast-progress::-moz-range-track,
+.pcast-progress::-moz-range-progress {
+  width: 100%;
+  height: $height;
+  background: $upper-background;
+}
+
+.pcast-progress::-moz-range-progress {
+  background: $lower-background;
+}
+
+.pcast-progress::-moz-range-thumb {
+  appearance: none;
+  margin: 0;
+  height: $thumb-height;
+  width: $thumb-height;
+  background: $thumb-color;
+  border-radius: 100%;
+  border: 0;
+  transition: background-color 150ms;
+}
+
+// Internet Exploder
+.pcast-progress::-ms-track {
+  width: 100%;
+  height: $height;
+  border: 0;
+  // color needed to hide track marks
+  color: transparent;
+  background: transparent;
+}
+
+.pcast-progress::-ms-fill-lower {
+  background: $lower-background;
+}
+
+.pcast-progress::-ms-fill-upper {
+  background: $upper-background;
+}
+
+.pcast-progress::-ms-thumb {
+  appearance: none;
+  height: $thumb-height;
+  width: $thumb-height;
+  background: $thumb-color;
+  border-radius: 100%;
+  border: 0;
+  transition: background-color 150ms;
+  // IE Edge thinks it can support -webkit prefixes
+  top: 0;
+  margin: 0;
+  box-shadow: none;
+}
+.pcast-progress:hover,
+.pcast-progress:focus {
+  &::-webkit-slider-thumb {
+    background-color: $thumb-hover-color;
+  }
+  &::-moz-range-thumb {
+    background-color: $thumb-hover-color;
+  }
+  &::-ms-thumb {
+    background-color: $thumb-hover-color;
+  }
+}

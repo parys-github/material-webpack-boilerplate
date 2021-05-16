@@ -1790,7 +1790,7 @@
     </div>
   </div>
 </section>
-<section class="content default-cards cards">
+<section class="content">
   <div class="mdc-layout-grid container">
     <div class="mdc-layout-grid__inner">
       <div
@@ -2115,7 +2115,7 @@
         class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-12-tablet"
       >
         <h2>Tabs</h2>
-        <div class="card mdc-elevation--z1">
+        <div class="card mdc-elevation--z1 global-radius">
           <!-- Tabs example -->
           <div class="mdc-tab-bar" role="tablist">
             <div class="mdc-tab-scroller">
@@ -2265,6 +2265,100 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+<!-- Audio Player Example -->
+<section class="content">
+  <div class="mdc-layout-grid container">
+    <div class="mdc-layout-grid__inner">
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet"
+      >
+        <h2>Audio Player</h2>
+        <div class="card mdc-elevation--z1 global-radius aplayer">
+          <!-- Audio Player -->
+          <div class="audio-container">
+            <div class="pcast-player">
+              <div class="pcast-player-controls">
+                <!-- Play/Pause Button -->
+                <button
+                  id="volume-control"
+                  class="mdc-icon-button pcast-play-pause"
+                  aria-label="Play"
+                  data-aria-label-on="Pause"
+                  data-aria-label-off="Play"
+                >
+                  <span class="aria-tip"></span>
+                  <i class="material-icons mdc-icon-button__icon">play_arrow</i>
+                  <i
+                    class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on"
+                    >pause</i
+                  >
+                </button>
+
+                <button
+                  class="pcast-rewind mdc-icon-button"
+                  aria-label="Rrewind 10sec"
+                  data-aria-label-on="Rrewind 10sec"
+                  data-aria-label-off="Rrewind 10sec"
+                >
+                  <img
+                    src="./../../img/icons/back_10s.png"
+                    alt="Back 10 seconds"
+                    class="img-fluid custom-icon"
+                  />
+                </button>
+                <button
+                  id="volume-control"
+                  class="mdc-icon-button pcast-mute"
+                  aria-label="Mute"
+                  data-aria-label-on="Unmute"
+                  data-aria-label-off="Mute"
+                >
+                  <i class="material-icons mdc-icon-button__icon">volume_up</i>
+                  <i
+                    class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on"
+                    >volume_off</i
+                  >
+                </button>
+                <button
+                  class="pcast-speed mdc-icon-button"
+                  aria-label="Change speed"
+                  data-aria-label-on="Change speed"
+                  data-aria-label-off="Change speed"
+                >
+                  1x
+                </button>
+                <span class="pcast-currenttime pcast-time">00:00</span>
+                <span class="pcast-time">&nbsp;/</span>
+                <span class="pcast-duration pcast-time">00:00</span>
+                <div class="progress-control">
+                  <input
+                    class="pcast-progress"
+                    type="range"
+                    name="timeline"
+                    min="0"
+                    max="100"
+                  />
+                </div>
+              </div>
+              <audio preload="metadata">
+                <source
+                  src="https://www.thesoundarchive.com/starwars/star-wars-theme-song.mp3?_=1"
+                  type="audio/mp3"
+                />
+              </audio>
+            </div>
+          </div>
+          <!-- Audio Player END -->
+        </div>
+      </div>
+      <!-- <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-12-tablet"
+      >
+        Empty col
+      </div> -->
     </div>
   </div>
 </section>

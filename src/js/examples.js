@@ -13,6 +13,7 @@ import Accordion from 'accordion/src/accordion.mjs'
 import { MDCDialog } from '@material/dialog'
 import { MDCSlider } from '@material/slider'
 import Swiper from 'swiper/bundle'
+import 'audiojs'
 
 require('./main')
 
@@ -226,3 +227,91 @@ for (let index = 0; index < swipersCollection.length; index += 1) {
     })
   )
 }
+
+// Audiojs initialize
+;(() => {
+  const pcastPlayers = document.querySelectorAll('.pcast-player')
+  const speeds = [1, 1.25, 1.5, 1.75, 2, 2.5, 3]
+
+  for (let i = 0; i < pcastPlayers.length; i += 1) {
+    const player = pcastPlayers[i]
+    const audio = player.querySelector('audio')
+    const playPause = player.querySelector('.pcast-play-pause')
+    const rewind = player.querySelector('.pcast-rewind')
+    const progress = player.querySelector('.pcast-progress')
+    const speed = player.querySelector('.pcast-speed')
+    const mute = player.querySelector('.pcast-mute')
+    const currentTime = player.querySelector('.pcast-currenttime')
+    const duration = player.querySelector('.pcast-duration')
+
+    let currentSpeedIdx = 0
+
+    const toHHMMSS = function (totalsecs) {
+      const secNum = parseInt(totalsecs, 10)
+      let hours = Math.floor(secNum / 3600)
+      let minutes = Math.floor((secNum - hours * 3600) / 60)
+      let seconds = secNum - hours * 3600 - minutes * 60
+
+      if (hours < 10) {
+        hours = '0' + hours
+      }
+      if (minutes < 10) {
+        minutes = '0' + minutes
+      }
+      if (seconds < 10) {
+        seconds = '0' + seconds
+      }
+
+      const time = minutes + ':' + seconds
+      return time
+    }
+
+    const durationHandler = () => {
+      if (audio.duration > 0) {
+        progress.setAttribute('max', Math.floor(audio.duration))
+        duration.textContent = toHHMMSS(audio.duration)
+      }
+    }
+    audio.addEventListener('loadedmetadata', durationHandler)
+    if (audio.readyState >= 2) {
+      durationHandler()
+    }
+    audio.addEventListener('timeupdate', () => {
+      progress.value = audio.currentTime
+      currentTime.textContent = toHHMMSS(audio.currentTime)
+    })
+
+    playPause.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play()
+      } else {
+        audio.pause()
+      }
+    })
+
+    rewind.addEventListener('click', () => {
+      audio.currentTime -= 10
+    })
+
+    progress.addEventListener('click', (e) => {
+      audio.currentTime =
+        Math.floor(audio.duration) * (e.offsetX / e.target.offsetWidth)
+    })
+
+    speed.addEventListener('click', () => {
+      currentSpeedIdx =
+        currentSpeedIdx + 1 < speeds.length ? currentSpeedIdx + 1 : 0
+      audio.playbackRate = speeds[currentSpeedIdx]
+      speed.textContent = speeds[currentSpeedIdx] + 'x'
+      return true
+    })
+
+    mute.addEventListener('click', () => {
+      if (audio.muted) {
+        audio.muted = false
+      } else {
+        audio.muted = true
+      }
+    })
+  }
+})()
