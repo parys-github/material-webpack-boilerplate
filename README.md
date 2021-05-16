@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-![Screenshot](https://mdpack.vajracode.net/screenshot1.jpg 'Screenshot')
+![Screenshot](https://repository-images.githubusercontent.com/353857455/3e4d0980-ae68-11eb-9e6b-4f3f8ac2dd6f 'Screenshot')
 
 > Webpack 5 with Material UI Components Boilerplate. Compilation contains basic Material template. Package is using Babel, PostCSS and Sass with a hot dev server. The project is fully configured and ready to generate the final production process.
 
